@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(ComicStore.self) private var comicStore
-    @Environment(FavoritesStore.self) private var favoriteStore
+    @Environment(FavoritesStore.self) private var favoritesStore
     
     var body: some View {
         @Bindable var comicStore = comicStore
@@ -49,9 +49,9 @@ struct ContentView: View {
     
     private var favoriteButton: some ToolbarContent {
         ToolbarItem {
-            if favoriteStore.contains(comicStore.selectedComic) {
+            if favoritesStore.contains(comicStore.selectedComic) {
                 Button {
-                    favoriteStore.remove(comicStore.selectedComic!)
+                    favoritesStore.remove(comicStore.selectedComic!)
                 } label: {
                     Image(systemName: "heart.fill")
                         .foregroundStyle(.red)
@@ -61,7 +61,7 @@ struct ContentView: View {
             }
             else {
                 Button {
-                    favoriteStore.add(comicStore.selectedComic!)
+                    favoritesStore.add(comicStore.selectedComic!)
                 } label: {
                     Image(systemName: "heart")
                 }
