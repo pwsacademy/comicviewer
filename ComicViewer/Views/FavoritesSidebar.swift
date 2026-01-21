@@ -30,14 +30,11 @@ struct FavoritesSidebar: View {
             }
             .padding()
             List(sortedFavorites, id: \.self, selection: $favoritesStore.selectedFavorite) { favorite in
-                NavigationLink(value: favorite) {
-                    VStack(alignment: .leading) {
-                        Text(favorite.title)
-                            .font(.headline)
-                        Text("#\(formattedNumber(favorite)) - \(formattedDate(favorite))")
-                            .foregroundStyle(.secondary)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                VStack(alignment: .leading) {
+                    Text(favorite.title)
+                        .font(.headline)
+                    Text("#\(formattedNumber(favorite)) - \(formattedDate(favorite))")
+                        .foregroundStyle(.secondary)
                 }
                 .listRowSeparator(.hidden)
                 .padding(5)
