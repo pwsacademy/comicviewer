@@ -2,14 +2,17 @@
 
 Comic Viewer lets you browse comics from [XKCD](https://xkcd.com) and track your favorites.
 
+This sample application supports our Swift courses and demonstrates various Swift features in a realistic setting.
+
+It was built for macOS and requires Xcode 26.
+
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="Screenshots/screenshot-dark@2x.webp 2x, Screenshots/screenshot-dark.webp 1x">
     <img src="Screenshots/screenshot-light.webp" alt="Screenshot of Comic Viewer" srcset="Screenshots/screenshot-light@2x.webp 2x">
 </picture>
 
-This sample application supports our Swift courses and demonstrates various Swift features in a realistic setting.
-
-The application was built for macOS and requires Xcode 26.
+> This app is made for educational purposes only.
+> All content is provided by XKCD under the [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/) license.
 
 ## Topics
 
